@@ -1,0 +1,188 @@
+/* Layout */
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: #f8fafc;
+}
+
+/* Global Header */
+.global-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  height: auto;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.global-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo {
+  width: 120px;
+}
+
+.global-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.global-header .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Body */
+.body-section {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+/* Profile Section */
+.profile-card {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-bg img {
+  width: 100%;
+  border-radius: 8px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: -35px;
+  border: 3px solid white;
+}
+
+.profile-info h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-info p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Sidebar Menu */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  color: #333;
+  font-size: 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.menu a i {
+  font-size: 18px;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #e6f2ff;
+  color: #007bff;
+}
+
+.menu a.logout {
+  color: red;
+  font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Dashboard Content */
+.dashboard-content h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-content span {
+  color: #007bff;
+}
+
+/* Welcome Box */
+.welcome-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-box .welcome-img img {
+  width: 280px; 
+  max-width: 100%;
+}
+
+/* Status */
+.status {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Info Section */
+.info-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+.info-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0;
+}
+
+
+
+/* Note Section */
+.note-box {
+  background: #fff3cd;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #856404;
+}

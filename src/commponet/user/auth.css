@@ -1,0 +1,200 @@
+/* Background overlay */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Card */
+.auth-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 520px; /* ✅ slightly wider */
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.auth-card h2 {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.auth-form {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Scrollbar styling */
+.auth-form::-webkit-scrollbar {
+  width: 6px;
+}
+.auth-form::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Form fields */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+}
+
+/* Rows */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+.form-group.half {
+  flex: 1;
+}
+.form-group.third {
+  flex: 1; /* ✅ for 3-column layout */
+}
+
+/* Buttons */
+.btn-login,
+.btn-signup {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-login {
+  background: #e67e00;
+  color: #fff;
+}
+.btn-login:hover {
+  background: #cc6f00;
+}
+.btn-signup {
+  background: #4c6c89;
+  color: #fff;
+}
+.btn-signup:hover {
+  background: #3b536b;
+}
+.full {
+  margin-top: 10px;
+}
+
+/* Google Button */
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
+.btn-google:hover {
+  background: #f8f8f8;
+}
+
+/* Footer text */
+.auth-footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+.auth-footer .link {
+  color: #e67e00;
+  cursor: pointer;
+  font-weight: 600;
+}
+.auth-footer .link:hover {
+  text-decoration: underline;
+}
+
+/* Message */
+.auth-message {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #007bff;
+}
+
+/* Back button */
+.auth-back-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

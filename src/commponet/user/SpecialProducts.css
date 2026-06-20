@@ -1,0 +1,262 @@
+.special-products {
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Box around each row */
+.special-box {
+  background: #fff;
+  border: 20px solid #fff;
+  border-bottom: 3px solid #f1f1f1;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.special-box h2 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.special-box .subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Product Rows */
+.products-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 10px;
+}
+
+.products-row.first-row {
+  justify-content: space-between;
+}
+
+.products-row.second-row {
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Product Card */
+.product-card {
+  flex: 0 0 220px;
+  max-width: 240px;
+  min-width: 220px;
+  height: 380px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Image */
+.product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Favorite */
+.favorite-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Title & Price */
+.product-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 8px 0;
+  height: 40px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.product-price {
+  color: blue;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* ✅ Action area - stable */
+.action-area {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Button Orange */
+.add-to-cart,
+.qty-control {
+  border: none;
+  background: #ffa726;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 45px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-to-cart:hover {
+  background: #fb8c00;
+}
+
+/* Quantity control */
+.qty-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer; 
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qty-control span { 
+  flex: 1;
+  text-align: center;
+  font-size: 16px; 
+  font-weight: bold;
+  color:#f1f1f1;
+}
+
+/* Green text */
+.added-box {
+  font-size: 13px;
+  color: green;
+  font-weight: 500;
+  text-align: center;
+  min-height: 18px;
+} 
+.added-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-weight: bold;
+  animation: fadeInOut 3s ease;
+}
+
+/* ✅ Smooth fade-in and fade-out */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* 🔥 Bigger second row products */
+.products-row.second-row .product-card {
+  flex: 0 0 280px;
+  max-width: 300px;
+  min-width: 260px;
+  height: 400px;
+}
+
+.products-row.second-row .product-image {
+  height: 200px;
+}
+
+.products-row.second-row .product-title {
+  font-size: 17px;
+  height: 48px;
+}
+
+.products-row.second-row .product-price {
+  font-size: 16px;
+}
+
+/* ✅ Confirmation Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Modal Box */
+.modal-box {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h3 {
+  margin-bottom: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-yes {
+  background: #0f97ba;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-no {
+  background: #ccc;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
